@@ -1,7 +1,6 @@
 package javaapplication1;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -11,7 +10,7 @@ import java.util.List;
  */
 public class Curso {
     private final int idCurso;
-    private final String nivel;
+    private String nivel;
     public List<Alumno> alumnos;
     private final double NOTA_APROBACION= 4.0;
 
@@ -29,6 +28,14 @@ public class Curso {
             Alumno alumno=alumnos.get(i);
             System.out.println((i+1)+") "+alumno.getNombres()+" "+alumno.getApellidos()+" -> "+alumno.getPromedio());
         }
+    }
+    
+    public String getNivel(){
+        return nivel;
+    }
+    
+    public void setNivel(String newNivel){
+        this.nivel=newNivel;
     }
     
     public Double getPromedio(){
